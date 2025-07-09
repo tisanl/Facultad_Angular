@@ -1,0 +1,8 @@
+================================================================================
+                        DECLARACION DE VARIABLES
+================================================================================
+En type script se puede o no especificar el tipo y el decorador de visibilidad
+Se puede declarar comom number y string
+Lo que si pide obligatoriamente es inicializarla, en caso de que no se puede hacer esto:
+edad?: number; Declaro una propiedad opcional dentro de una interfaz o clase
+nombre!: string; Declaro la propiedad prometiendole a angular que se va a definir antes de usarse

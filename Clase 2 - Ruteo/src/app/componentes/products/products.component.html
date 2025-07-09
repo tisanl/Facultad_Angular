@@ -1,0 +1,30 @@
+<p>Lista de productos</p>
+
+<ul>
+
+    @if (productos.length > 1) {
+        @for (producto of productos; track $index) {
+            <li>
+                {{producto.id}} - {{producto.nombre}}
+                <button [routerLink]="'./' + producto.id">Ver {{$index}} </button>
+            </li>
+            }
+    }
+</ul>
+
+<ng-container class="fondo" *ngIf="productos.length > 1" >
+    <ul>
+
+        <li *ngFor="let product of productos; let i = index">
+            {{product.id}} - {{product.nombre}}
+            <button [routerLink]="'./detail'">Ver {{i}}</button>
+        </li>
+    
+    </ul>
+</ng-container>
+
+
+
+
+
+<router-outlet />

@@ -1,0 +1,32 @@
+================================================================================
+                            COMANDOS NG
+================================================================================
+=========================== Nuevo Proyecto =====================================
+ng new <my-project>
+
+=========================== Ejecucion de proyecto ==============================
+. Ejecuta la aplicacion en el puerto que sea (por default el 4200)
+ng serve
+
+. Correr la aplicación en el puerto 4200 y abre el navegador con la aplicación
+ng serve --port 4200 -o
+-o es lo que abre el navegador directamente
+
+=========================== Generacion de componentes ==========================
+. Generar un componente en la ruta components/mi-componente
+ng g c 'components/mi-componente'
+
+. Generar una clase en la ruta models/mi-clase
+ng g class 'models/mi-clase
+
+. Generar un servicio en la ruta services/ llamado mi-servicio
+ng g s 'services/mi-servicio'
+
+. Generar un módulo dentro de components/mi-componente
+ng g m 'components/mi-componente'
+
+. Generar un módulo de routing en la base del proyecto con el nombre app-routing
+ng g m app-routing --flat --module=app
+
+. Ejemplo
+ng g c componentes/bienvenidos; ng g c componentes/error; ng g c componentes/login

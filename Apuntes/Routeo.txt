@@ -1,0 +1,35 @@
+================================================================================
+                            ROUTEO
+================================================================================
+Para rutear correctamente hay que configurar el app.routes.ts que es el archivo que maneja las rutas
+Y importar el modulo RouterModule en app.componenet.
+
+Tambien se puede usar cada componente para no importar todo el modulo:
+
+RouterLink Y RouterLinkActive permite usar una linea de este tipo en el html:
+<button routerLink="about" routerLinkActive="active-route"  >About</button>
+
+Router, al generarlo como una prompiedad de componente, permite viajar al path que se le pase por parametro, por ej:
+export class AppComponent {
+  title = 'rutas';
+
+  constructor(private router: Router) {
+
+  }
+
+  goTo(path: string) {
+    this.router.navigate([path]);
+  }
+}
+
+router.navigate recibe una lista de path, por eso esta escrito de esa manera, lo mismo que generaria app.routes
+
+<button (click)="goTo('products')" > Productos</button>
+Es algo que se generaria con esa funcion
+
+Dos formas correctas de hacerlo
+<button routerLink="aboutMe" routerLinkActive="active-route">About Me</button>
+<button (click)="goTo('aboutMe')" >About</button>
+
+
+RouterOutlet es el modulo que usa angular para determinar cual es el componente se debe mostrar segun la ruta

@@ -1,0 +1,24 @@
+<h1>Ejercicio 1<br></h1>
+
+<input type="text" [(ngModel)]="edadUno" /><br>
+<input type="text" [(ngModel)]="edadDos" /><br><br>
+
+<button (click)="sumarEdades()">Calcular</button><br>
+<button (click)="limpiarCuadrosTexto()">Limpiar cuadros de texto</button>
+
+<p>Edad total: {{ edadTotal }}<br></p>
+
+<h1>Ejercicio 2<br></h1>
+
+@if (usuarioEncontrado === undefined) {
+    <app-login (valorRetornado)="recibirUsuario($event)"></app-login>
+}
+
+@if (usuarioEncontrado === true) {
+    <app-bienvenido></app-bienvenido>
+}
+
+@if (usuarioEncontrado === false) {
+    <app-error></app-error>
+    <button (click)="usuarioEncontrado = undefined">Reintentar</button>
+}

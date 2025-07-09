@@ -1,0 +1,20 @@
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+ .borde {
+    border: 1px solid rgb(158, 159, 160);
+  }
+
+  .hijo {
+    width: 200px;
+    height: 200px;
+    margin: 0rem 2rem;
+    text-align: center;
+  }
+
+  

@@ -1,0 +1,8 @@
+================================================================================
+                        HOST FIREBASE
+================================================================================
+Para que cuando buildee y despues hostee se suba automaticamente sin tener que copiar
+y pegar hay que:
+
+Opcion 1: Cambiar en angular.json, en build, el dist por public
+Opcion 2: Cambiar en en firebase.json, public por dist

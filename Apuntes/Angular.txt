@@ -1,0 +1,23 @@
+================================================================================
+                            ANGULAR
+================================================================================
+Angular es un framework que usa typescript, html y los distintos estilos como css o scss.
+Combina todo junto y se encarga de manejar el servidor.
+Permite crear una app de manera muy sencilla
+
+Instalacion:
+. Descargar nodejs
+. Abrir una terminal y poner: npm install -g @angular/cli
+- Puede dar error porque quiero ejecutar un app y windows lo bloquea, en ese caso poner: 
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+- Despues ejecutar el install
+
+Si clono un repositorio de github hay que ejecutar: npm install
+Esto es porque la carpeta node_modules no se sube a github
+Este comando va a ver los modulos que tiene que descargar y los trae. Estan en package-lock.json
+
+Estructura del proyecto:
+https://v17.angular.io/guide/file-structure?authuser=0
+
+Guia de estilos:
+https://v17.angular.io/guide/styleguide

@@ -1,0 +1,11 @@
+
+
+<div class="borde">
+        <h3>Dato: {{dato}}</h3>
+    <div class="padre">
+
+        <app-hijo1 [datoPadre]="dato"></app-hijo1>
+
+        <app-hijo2 (onEnviarDato)="recibirDato($event)"></app-hijo2>
+    </div>
+</div>
