@@ -1,0 +1,32 @@
+<main class="contenido-contenedor">
+    <div class="header">
+        <p class="cronometro2">{{ cronometro?.formateado }}</p>
+        <h2 class="form-title">REFLEJOS</h2>
+        <button class="btn btn-cerrar2" (click)="goTo('games/menu')">X</button>
+    </div>
+
+    <div class="body">
+        <p class="mensaje">{{ mensaje }}</p>
+        <button class="btn btn-juego"
+        [ngClass]="{
+        'btn-error': estado === 'resultado' && fallo,
+        'btn-bien': estado === 'resultado' && !fallo}" 
+        (click)="estado === 'inicio' ? iniciarRonda() : manejarClick()">
+            {{
+            estado === 'inicio'
+            ? 'Comenzar'
+            : estado === 'esperando'
+            ? 'Esperá...'
+            : estado === 'activo'
+            ? '¡YA!'
+            : 'Continuar'
+            }}
+        </button>
+    </div>
+
+    <div class="footer">
+        <P class="mb-4 score-box">Intentos restantes: <span class="score-num">{{ intentos }}</span></P>
+        <P class="mb-4 score-box">Score: <span class="score-num">{{ puntos }}</span></P>
+    </div>
+
+</main>

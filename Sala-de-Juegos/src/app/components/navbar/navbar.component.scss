@@ -1,0 +1,49 @@
+.topbar {
+    // Posicionamiento
+    position: sticky ; // Queda fijo arriba
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; // Ocupa todo el ancho
+    padding: 0.30rem 1rem;
+    box-sizing: border-box;
+    // Para las cosas de adentro
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // Colores
+    background-color: #09252c;
+    color: #fff;
+    border-bottom: 2px solid #51db84;
+}
+
+.logo-container {
+    left: 50%;
+    top: 50%;
+}
+
+.btn-barra-lateral {
+    position: relative;
+    z-index: 1010;
+    background: none;
+    border: 2px solid #51db84;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-barra-lateral img {
+    width: 3%;
+    height: 3%;
+    object-fit: contain;
+}
+
+.label-nombre-usuario {
+    z-index: 1010;
+    color: #b39353;
+}

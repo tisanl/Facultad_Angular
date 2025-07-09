@@ -1,0 +1,15 @@
+<main class="contenido-contenedor">
+  <h1 class="display-3 fw-bold mb-4 animate-title">
+    <span style="color: white;">¡Bienvenidos a </span>
+    <span style="color: #51db84">Sala de Juegos</span>!
+  </h1>
+
+  <div class="botones-contenedor">
+    <button class="btn btn-type-1" (click)="goTo('../games')">Menu de Juegos</button>
+    <button class="btn btn-type-2" (click)="goTo('chat')">Sala de Chat</button>
+    <button class="btn btn-type-2" (click)="goTo('scores')">Scores</button>
+    <button class="btn btn-type-2" (click)="goTo('encuestas')">Encuesta</button>
+    <button class="btn btn-type-2" (click)="goTo('about-me')">About Me</button>
+    <button class="btn btn-type-3" (click)="logOut()">LogOut</button>
+  </div>
+</main>

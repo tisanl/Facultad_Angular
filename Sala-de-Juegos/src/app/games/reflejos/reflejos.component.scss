@@ -1,0 +1,99 @@
+.contenido-contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.header {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-top: 30px;
+}
+
+.cronometro2 {
+    background: #1c4549;
+    color: #b39353;
+    border: 1px solid #b39353;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.btn-cerrar2 {
+    background: #1c4549;
+    color: #b39353;
+    border: 1px solid #b39353;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.btn-cerrar2:hover {
+    color: #51db84;
+    border-color: #51db84;
+    transform: scale(1.05);
+}
+
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.mensaje {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #b39353; // dorado de su paleta
+    background-color: #010b15; // casi negro de fondo
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 2px solid #b39353;
+    box-shadow: 0 0 10px rgba(179, 147, 83, 0.4);
+}
+
+.btn-juego {
+    font-size: 5rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #51db84;
+    color: #010b15;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-error {
+    background-color: #c0392b;
+}
+
+.btn-bien {
+    background-color: #b39353;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1rem;
+}

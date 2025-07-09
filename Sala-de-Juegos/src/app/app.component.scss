@@ -1,0 +1,10 @@
+.layout {
+    display: flex; // Que se acomoden
+    flex-direction: column; // Pone los compoenentes en vertical
+    height: 100vh; // Con esto ocupa toda la pantalla
+    margin: 0; // Elimina margenes que se pongan por defecto
+}
+
+.content {
+    flex: 1; // Con esto crece hasta llenar todo el espacio disponible
+}

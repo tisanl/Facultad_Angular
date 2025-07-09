@@ -1,0 +1,20 @@
+/* Animación del título dentro del Home */
+.animate-title {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeSlideDown 1.2s ease-out forwards;
+}
+
+@keyframes fadeSlideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.botones-contenedor {
+    display: flex;
+    gap: 1rem; // El espacio entre cosas
+    flex-wrap: wrap; // Acomoda las cosas en una linea y si revarsa crea una nueva linea
+    justify-content: center;
+}

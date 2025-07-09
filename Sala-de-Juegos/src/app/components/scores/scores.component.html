@@ -1,0 +1,102 @@
+<main class="contenedor">    
+    <div class="header-close">
+        <button class="btn-home" (click)="goTo('home')">X</button>
+    </div>
+
+    <h2 class="display-3 fw-bold mb-4 animate-title">SCORES</h2>
+
+    <div class="tables-container">
+        <!-- Tabla 1 -->
+        <table class="score-table">
+            <thead>
+                <tr>
+                    <th colspan="4" class="table-title">Ahorcado</th>
+                </tr>
+                <tr>
+                    <th>Posición</th>
+                    <th>Nombre</th>
+                    <th>Puntos</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let score of scoreAhorcado; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ score.usuario_nombre }}</td>
+                    <td>{{ score.points }}</td>
+                    <td>{{ score.fecha }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabla 2 -->
+        <table class="score-table">
+            <thead>
+                <tr>
+                    <th colspan="4" class="table-title">Mayor Menor</th>
+                </tr>
+                <tr>
+                    <th>Posición</th>
+                    <th>Nombre</th>
+                    <th>Puntos</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let score of scoreMayorMenor; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ score.usuario_nombre }}</td>
+                    <td>{{ score.points }}</td>
+                    <td>{{ score.fecha }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabla 3 -->
+        <table class="score-table">
+            <thead>
+                <tr>
+                    <th colspan="4" class="table-title">Preguntados</th>
+                </tr>
+                <tr>
+                    <th>Posición</th>
+                    <th>Nombre</th>
+                    <th>Puntos</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let score of scorePreguntados; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ score.usuario_nombre }}</td>
+                    <td>{{ score.points }}</td>
+                    <td>{{ score.fecha }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabla 3 -->
+        <table class="score-table">
+            <thead>
+                <tr>
+                    <th colspan="4" class="table-title">Reflejos</th>
+                </tr>
+                <tr>
+                    <th>Posición</th>
+                    <th>Nombre</th>
+                    <th>Puntos</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let score of scoreReflejos; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ score.usuario_nombre }}</td>
+                    <td>{{ score.points }}</td>
+                    <td>{{ score.fecha }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</main>

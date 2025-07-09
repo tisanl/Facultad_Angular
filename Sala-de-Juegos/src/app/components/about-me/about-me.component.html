@@ -1,0 +1,35 @@
+<main class="contenido-contenedor">
+    <div class="profile-card">
+        <!-- Botón arriba a la derecha -->
+        <button class="btn-cerrar" style="top: 0.50rem; right: 0.50rem;" (click)="goTo('home')">X</button>
+
+        <!-- Header con imagen e info, desplazado hacia abajo -->
+        <div class="profile-header">
+
+            <div class="profile-image">
+                <img [src]="imagenUrl" alt="Imagen de perfil" />
+            </div>
+
+            <div class="profile-info">
+                <h2>{{ nombre }} {{ apellido }}</h2>
+                <p><strong>{{ materia }}</strong></p>
+                <p><strong>División:</strong> {{ division }}</p>
+                <p>Soy estudiante de programación en la UTN y trabajo en un estudio jurídico especializado en accidentes laborales. 
+                    Allí digitalize la gestion, mejorando su eficiencia. 
+                    También diseñé el flujo de atención al cliente y 
+                    desarrollé programas que automatizan la redacción de escritos.
+                </p>
+            </div>
+        </div>
+
+        <div class="description">
+            <h3>Descripción del Juego Propio</h3>
+            <p>El juego propio se llama Reflejos y consiste en reaccionar lo más rápido posible cuando el botón diga
+                “¡YA!”.
+                Cada vez que empieza una ronda, hay que esperar sin tocar nada hasta que el botón se active. Si se toca
+                antes, el intento se pierde.
+                Se juega un total de 5 rondas. En cada una se mide el tiempo de reacción, y según eso se suman puntos.
+                Al final, se muestra el puntaje total.</p>
+        </div>
+    </div>
+</main>

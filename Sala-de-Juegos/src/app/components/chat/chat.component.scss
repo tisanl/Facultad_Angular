@@ -1,0 +1,118 @@
+.chat-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 800px;
+    height: 80vh;
+    margin: 2rem auto;
+    border: 2px solid #51db84;
+    border-radius: 8px;
+    background-color: #010b15;
+    box-sizing: border-box;
+    padding-bottom: 4rem;
+    border-radius: 20px;
+    /* espacio para el input flotante */
+}
+
+/* Cabecera con fondo distinto */
+.chat-header {
+    background-color: #09252c;
+    padding: 1rem;
+    border-bottom: 1px solid #51db84;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.chat-title {
+    margin: 0;
+    text-align: center;
+    color: #51db84;
+    font-size: 1.5rem;
+}
+
+/* Input flotante, sin tocar bordes */
+.chat-input {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 4rem);
+    box-sizing: border-box;
+}
+
+/* Input con padding a la derecha para dejar espacio al botón */
+.chat-input input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 20px;
+    background-color: #09252c;
+    box-sizing: border-box;
+}
+
+/* Botón posicionado encima al final, a la derecha del input */
+.btn-send {
+    position: absolute;
+    right: 0.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.chat-message {
+    width: 95%;
+}
+
+.chat-message-author {
+    margin-bottom: 0.25rem;
+    margin-left: 1rem;
+    color: #51db84;
+}
+
+/* Burbuja a full-width */
+.chat-message-bubble {
+    color: white;
+    max-width: 70%;
+    width: fit-content;
+    padding: 0.30rem;
+    background-color: #09252c;
+    border: 1px solid #51db84;
+    border-radius: 12px;
+    word-break: break-word;
+    margin-bottom: 1rem;
+}
+
+.chat-message.propio {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+/* Hora debajo, full-width */
+.chat-message-time {
+    display: block;
+    text-align: right;
+    font-size: 0.75rem;
+    color: #b39353;
+    margin-top: 0.25rem;
+}
+
+.messages-box {
+    overflow-y: auto;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    flex: 1;
+}
+
+/* Scrollbar para .messages-box */
+.messages-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messages-box::-webkit-scrollbar-thumb {
+    background: #51db84;
+    border-radius: 4px;
+    border: 2px solid #1c4549;
+}

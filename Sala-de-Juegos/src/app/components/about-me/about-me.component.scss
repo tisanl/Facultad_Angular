@@ -1,0 +1,83 @@
+.profile-card {
+    position: relative;
+    background-color: #09252c;
+    color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    margin-bottom: 1.5rem; 
+    margin-top: 1.5rem; 
+}
+
+.profile-image img {
+    width: 250px;  /* Ajusta el tamaño de la imagen */
+    height: 400px; /* Ajusta el tamaño de la imagen */
+    border-radius: 10%;
+    object-fit: cover;
+    border: 2px solid #51db84;
+    margin-right: 1.5rem; /* Espacio entre la imagen y el texto */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 1.8rem; /* Ajuste de tamaño del título */
+    color: #b39353;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #51db84;
+}
+
+/* Descripción */
+.description {
+    margin-top: 1rem;
+}
+
+.description h3 {
+    font-size: 1.25rem;
+    color: #51db84;
+    margin-bottom: 1rem;
+}
+
+.description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff;
+    text-align: left;
+}
+
+/* Estilo de la imagen (sección de imagen) */
+.image-container {
+    margin-top: 1.5rem;
+}
+
+.image-container h3 {
+    font-size: 1.25rem;
+    color: #51db84;
+    margin-bottom: 1rem;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,42 @@
+<main class="contenido-contenedor">
+    <div class="text-center">
+        <div class="d-flex justify-content-center align-items-center position-relative mb-4">
+            <!-- Cronometro -->
+            <p class="cronometro">
+                {{ cronometro?.formateado }}
+            </p>
+
+            <!-- Titulo -->
+            <h2 class="form-title">AHORACADO DE ANIMALES</h2>
+
+            <!-- Botón arriba a la derecha -->
+            <button class="btn btn-cerrar" (click)="goTo('games/menu')">
+                X
+            </button>
+        </div>
+
+        <!-- Score-->
+        <div class="mb-4 score-box">
+            Score: <span class="score-num">{{ puntos }}</span>
+        </div>
+
+
+        <!-- Imagen del ahorcado -->
+        <div id="hangman-image" class="mb-4">
+            <img src="assets/ahorcado-images/{{ errores }}.png" class="img-fluid w-5000">
+        </div>
+
+        <!-- Palabra oculta -->
+        <div id="word-display" class="mb-4 display-palabra">
+            <span *ngFor="let letra of listaLetrasMostradas">{{ letra }}</span>
+        </div>
+
+        <!-- Teclado de letras -->
+        <div id="keyboard" class="d-flex flex-wrap justify-content-center gap-2">
+            <button class="btn btn-type-2 btn-letras" (click)="evaluarLetra(letra)"
+                [disabled]="letrasProbadas.includes(letra)" *ngFor="let letra of abecedario">
+                {{ letra }}
+            </button>
+        </div>
+    </div>
+</main>

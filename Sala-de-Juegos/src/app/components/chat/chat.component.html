@@ -1,0 +1,30 @@
+<main class="contenido-contenedor">
+    <div class="chat-box">
+        <div class="chat-header">
+            <!-- Botón arriba a la derecha -->
+            <h2 class="chat-title">Sala de Chat</h2>
+            <button class="btn-cerrar" style="top: 0.50rem; right: 0.50rem;" (click)="goTo('home')">X</button>
+        </div>
+
+        <div class="messages-box" #chatContainer>
+            <div *ngFor="let msg of chats; let i = index" class="chat-message"
+                [ngClass]="{ 'propio': msg.usuario_id === usuario.data!.id }">
+                <div *ngIf="msg.usuario_id !== usuario.data!.id && (i === 0 || chats[i - 1].usuario_nombre !== msg.usuario_nombre)"
+                    class="chat-message-author">
+                    {{ msg.usuario_nombre }}
+                </div>
+                <div class="chat-message-bubble">
+                    {{ msg.content }}<br>
+                    <span class="chat-message-time">{{ msg.hora }}</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="chat-input">
+            <input [(ngModel)]="nuevoMensaje" class="input-custom" type="text" placeholder="Escribe un mensaje…"
+                (keydown)="onKeyDown($event)" />
+            <button class="btn-type-3 btn-send" (click)="enviar()">Enviar</button>
+        </div>
+    </div>
+</main>

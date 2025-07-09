@@ -1,0 +1,79 @@
+.btn-type-1,
+.btn-type-2,
+.btn-type-3,
+.btn-type-4 {
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Boton verde, hover dorado
+.btn-type-1 {
+    background-color: #51db84;
+}
+
+.btn-type-1:hover {
+    background-color: #09252c;
+    color: #b39353;
+    border: 1px solid #b39353;
+    transform: scale(1.05);
+}
+
+// Boton azul oscuro, hover dorado
+.btn-type-2 {
+    background-color: #09252c;
+    color: #51db84;
+    border: 1px solid #51db84;
+}
+
+.btn-type-2:hover {
+    background-color: #b39353;
+    color: #010b15;
+    transform: scale(1.05);
+}
+
+// Boton dorado, hover verde
+.btn-type-3 {
+    background-color: #b39353;
+}
+
+.btn-type-3:hover {
+    background-color: #09252c;
+    color: #51db84;
+    border: 1px solid #51db84;
+    transform: scale(1.05);
+}
+
+// Boton gris oscuro, borde dorado, hover oscuro con verde
+.btn-type-4 {
+    color: #b39353;
+    border: 1px solid #b39353;
+}
+
+.btn-type-4:hover {
+    background-color: #51db84;
+    color: #010b15;
+    transform: scale(1.05);
+}
+
+// BOTON CERRAR
+.btn-cerrar {
+    background: #1c4549;
+    color: #b39353;
+    border: 1px solid #b39353;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.btn-cerrar:hover {
+    color: #51db84;
+    border-color: #51db84;
+    transform: scale(1.05);
+}

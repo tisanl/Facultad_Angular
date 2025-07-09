@@ -1,0 +1,120 @@
+.contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow-y: auto;
+    gap: 0.5rem; 
+}
+
+.animate-title {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeSlideDown 1.2s ease-out forwards;
+    color: white;
+}
+
+@keyframes fadeSlideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.header-close {
+  margin-left: auto;
+}
+
+.btn-home {
+    background: #1c4549;
+    color: #b39353;
+    border: 1px solid #b39353;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    top: 0;
+    right: 0;
+}
+
+.btn-home:hover {
+    color: #51db84;
+    border-color: #51db84;
+    transform: scale(1.05);
+}
+
+.tables-container {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    /* todas las tablas a la misma altura */
+}
+
+.score-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #010b15;
+    /* casi negro de fondo */
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border: 2px solid #51db84;
+    /* borde verde */
+}
+
+.score-table th,
+.score-table td {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+
+.score-table thead {
+    background-color: #09252c;
+    /* azul muy oscuro */
+}
+
+.score-table thead th {
+    border-bottom: 2px solid #51db84;
+    /* línea verde */
+}
+
+.score-table tbody tr:nth-child(odd) {
+    background-color: #1c4549;
+    /* azul oscuro en filas impares */
+}
+
+.score-table tbody tr:nth-child(even) {
+    background-color: #010b15;
+    /* casi negro en filas pares */
+}
+
+.score-table tbody tr:hover {
+    background-color: #51db84;
+    /* verde al pasar el cursor */
+    color: #010b15;
+}
+
+.score-table caption {
+    caption-side: top;
+    padding: 0.5rem 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #b39353;
+}
+
+.score-table .table-title {
+    text-align: center;
+    padding: 0.5rem 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #b39353;
+    /* dorado */
+    background-color: #09252c;
+    /* azul muy oscuro */
+    border-bottom: 2px solid #51db84;
+    /* línea verde */
+}
+

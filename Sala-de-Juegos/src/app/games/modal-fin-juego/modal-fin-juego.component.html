@@ -1,0 +1,18 @@
+<div class="modal-content custom-modal-content">
+    <div class="modal-header custom-modal-header">
+        <h5 class="modal-title">{{ titulo }}</h5>
+    </div>
+
+    <div class="modal-body custom-modal-body">
+        {{ mensaje }}
+    </div>
+
+    <div class="modal-footer custom-modal-footer">
+        <button type="button" class="btn btn-type-2" (click)="activeModal.close('volverAJugar')">
+            Volver a Jugar
+        </button>
+        <button type="button" class="btn btn-type-4" (click)="activeModal.close('volverAlMenu')">
+            Volver al Menu de Juegos
+        </button>
+    </div>
+</div>

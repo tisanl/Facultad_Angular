@@ -1,0 +1,161 @@
+.contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow-y: auto;
+    gap: 0.5rem;
+}
+
+.header-close {
+    margin-left: auto;
+}
+
+.btn-home {
+    background: #1c4549;
+    color: #b39353;
+    border: 1px solid #b39353;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.btn-home:hover {
+    color: #51db84;
+    border-color: #51db84;
+    transform: scale(1.05);
+}
+
+.animate-title {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeSlideDown 1.2s ease-out forwards;
+    color: white;
+}
+
+@keyframes fadeSlideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+// Estilos del label
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #b39353;
+    font-weight: 500;
+}
+
+// Estilo del texto del error
+small.error-text {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.5rem;
+    color: red;
+}
+
+// Estilos de los inputs text
+input.form-control {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #1c4549;
+    border: 1px solid #51db84;
+    border-radius: 0.7rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input.form-control:focus {
+    border: 1px solid #51db84;
+    box-shadow: 0 0 0 0.2rem #51db84;
+    outline: none;
+}
+
+input.ng-invalid.ng-touched {
+    border-color: red;
+    box-shadow: 0 0 0 0.1rem red;
+}
+
+// Estilos de los inputs radio button
+input.form-check-input[type="radio"] {
+    accent-color: #51db84;
+}
+
+input.form-check-input[type="radio"]:checked {
+    background-color: #51db84;
+    border-color: #51db84;
+}
+
+input.form-check-input[type="radio"]:focus {
+    box-shadow: 0 0 0 0.2rem rgba(81, 219, 132, 0.25);
+}
+
+// Estilos de los inputs checkbox
+input.form-check-input[type="checkbox"] {
+    accent-color: #51db84;
+}
+
+input.form-check-input[type="checkbox"]:checked {
+    background-color: #51db84;
+    border-color: #51db84;
+}
+
+input.form-check-input[type="checkbox"]:focus {
+    box-shadow: 0 0 0 0.2rem rgba(81, 219, 132, 0.25);
+}
+
+// Estilos de los inputs select
+
+#experienciaUsuario {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    color: #51db84;
+    background-color: #010b15;
+    border: 1px solid #51db84;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Sobre el placeholder deshabilitado */
+#experienciaUsuario option[disabled] {
+    color: #888;
+}
+
+/* En foco */
+#experienciaUsuario:focus {
+    border-color: #51db84;
+    box-shadow: 0 0 0 0.2rem rgba(81, 219, 132, 0.25);
+    outline: none;
+}
+
+.btn-enviar {
+    display: block;
+    padding: 0.75rem 2rem;
+    margin: 2rem auto 0; 
+    background-color: #09252c;
+    color: #51db84;
+    border: 1px solid #51db84;
+    border-radius: 1.5rem;
+    transition: filter 0.2s;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: #b39353;
+    color: #010b15;
+    transform: scale(1.05);
+}

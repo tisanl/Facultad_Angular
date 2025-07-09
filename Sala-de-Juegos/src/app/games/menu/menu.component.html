@@ -1,0 +1,26 @@
+<main class="contenido-contenedor">
+    <div class="form-box text-center">
+        <h2 class="form-title">Menú de Juegos</h2>
+
+        <div class="juegos-grid">
+            <button class="btn btn-type-2" (click)="goTo('games/ahorcado')">
+                <img src="assets/menu-juegos/ahorcado.png" alt="Ahorcado" />
+                Ahorcado
+            </button>
+            <button class="btn btn-type-2" (click)="goTo('games/mayor-menor')">
+                <img src="assets/menu-juegos/mayor-menor.jpg" alt="Mayor Menor" />
+                Mayor Menor
+            </button>
+            <button class="btn btn-type-2" (click)="goTo('games/preguntados')">
+                <img src="assets/menu-juegos/preguntados.jpg" alt="Preguntados" />
+                Preguntados
+            </button>
+            <button class="btn btn-type-2" (click)="goTo('games/reflejos')">
+                <img src="assets/menu-juegos/reflejos.png" alt="Reflejos" />
+                Reflejos
+            </button>
+        </div>
+
+        <button class="btn btn-type-3 mt-4 mx-auto d-block" (click)="goTo('home')">Volver</button>
+    </div>
+</main>

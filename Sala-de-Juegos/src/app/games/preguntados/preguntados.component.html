@@ -1,0 +1,49 @@
+<main class="contenido-contenedor">
+    <div class="text-center">
+        <div class="d-flex justify-content-center align-items-center position-relative mb-4">
+            <!-- Cronometro -->
+            <p class="cronometro">
+                {{ cronometro?.formateado }}
+            </p>
+
+            <!-- Titulo -->
+            <h2 class="form-title">PREGUNTADOS</h2>
+
+            <!-- Botón arriba a la derecha -->
+            <button class="btn btn-cerrar" (click)="goTo('games/menu')">
+                X
+            </button>
+        </div>
+
+        <div id="hangman-image" class="mb-4 position-relative">
+            <img [src]="personajeImagenUrl" class="img-carta" />
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+            <p class="question-label">
+                ¿QUE PERSONAJE ES?
+            </p>
+        </div>
+
+        
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+            <button class="btn btn-type-2"[disabled]="seleccionado"
+                [ngClass]="seleccionado? (resultado === opcion1 ? 'btn-correct' : 'btn-wrong'): ''" (click)="evaluarRespuesta(opcion1)">{{ opcion1 }}</button>
+            <button class="btn btn-type-2" [disabled]="seleccionado"
+                [ngClass]="seleccionado? (resultado === opcion2 ? 'btn-correct' : 'btn-wrong'): ''" (click)="evaluarRespuesta(opcion2)">{{ opcion2 }}</button>
+            <button class="btn btn-type-2" [disabled]="seleccionado"
+                [ngClass]="seleccionado? (resultado === opcion3 ? 'btn-correct' : 'btn-wrong'): ''" (click)="evaluarRespuesta(opcion3)">{{ opcion3 }}</button>
+            <button class="btn btn-type-2" [disabled]="seleccionado"
+                [ngClass]="seleccionado? (resultado === opcion4 ? 'btn-correct' : 'btn-wrong'): ''" (click)="evaluarRespuesta(opcion4)">{{ opcion4 }}</button>
+        </div>
+        <div class="mb-4 score-box">
+            Score: <span class="score-num">{{ puntos }}</span>
+        </div>
+        <p class="label-color">
+            PREGUNTAS RESTANTES: {{ preguntasRestantes }}
+        </p>
+        <p class="label-color">
+            ACIERTOS: {{ aciertos }}
+        </p>
+    </div>
+</main>

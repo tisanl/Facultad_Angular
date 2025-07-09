@@ -1,0 +1,129 @@
+<ng-template #requiredError let-control="control">
+    <small class="text-danger" *ngIf="control.touched && control.hasError('required')">
+        Este campo es obligatorio
+    </small>
+</ng-template>
+
+<main class="contenedor">
+    <div class="header-close">
+        <button class="btn-home" (click)="goTo('home')">X</button>
+    </div>
+
+    <h2 class="display-3 fw-bold mb-4 animate-title">Encuesta</h2>
+
+    <!-- [formGroup] con eso declaro el form al cual se asociara -->
+    <!-- (ngSubmit) con eso declaro la funcion que se ejecutara cuando haga summit -->
+    <form [formGroup]="form" (ngSubmit)="enviarForm()" class="mb-4" style="width: 70% mx-auto">
+        <!-- row es una clase de bootstrap para crear una fila -->
+        <div class="row">
+            <!-- col es la cantidad de columnas que ocupa un elemento, siempre es sobre 12, este ocupa 4 columnas de 12 -->
+            <div class="col-4">
+                <label class="form-label" for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                <ng-container *ngIf="nombre?.hasError('pattern')">
+                    <small class="text-danger">Solo debe contener letras</small>
+                </ng-container>
+                <ng-container *ngTemplateOutlet="requiredError; context: { control: nombre }"></ng-container>
+            </div>
+
+            <div class="col-4">
+                <label class="form-label" for="edad">Edad</label>
+                <input type="text" class="form-control" id="edad" formControlName="edad">
+                <ng-container *ngIf="edad?.hasError('min') || edad?.hasError('max') || edad?.hasError('pattern')">
+                    <small class="text-danger">Escribir un numero entre 18 y 99</small>
+                </ng-container>
+                <ng-container *ngTemplateOutlet="requiredError; context: { control: edad }"></ng-container>
+            </div>
+
+            <div class="col-4">
+                <label class="form-label" for="telefono">Telefono</label>
+                <input type="text" class="form-control" id="telefono" formControlName="telefono">
+                <ng-container *ngIf="telefono?.hasError('pattern')">
+                    <small class="text-danger">Solo 10 caracteres numericos</small>
+                </ng-container>
+                <ng-container *ngTemplateOutlet="requiredError; context: { control: telefono }"></ng-container>
+            </div>
+        </div><br>
+
+        <!-- Nueva fila -->
+        <div class="row">
+            <div class="col-12">
+                <label class="form-label d-block">Juego favorito?</label>
+
+                <!-- opción 1 -->
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="ahorcado" formControlName="juegoFavorito"
+                        value="ahorcado">
+                    <label class="form-check-label" for="ahorcado">Ahoracado</label>
+                </div>
+
+                <!-- opción 2 -->
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="mayor-menor" formControlName="juegoFavorito"
+                        value="mayor-menor">
+                    <label class="form-check-label" for="mayor-menor">Mayor Menor</label>
+                </div>
+
+                <!-- opción 3 -->
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="preguntados" formControlName="juegoFavorito"
+                        value="preguntados">
+                    <label class="form-check-label" for="preguntados">Preguntados</label>
+                </div>
+
+                <ng-container *ngTemplateOutlet="requiredError; context: { control: juegoFavorito }"></ng-container>
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-12">
+                <label class="form-label d-block">Que Juegos te gustaria que se agreguen?</label>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="tateti" formControlName="tateti">
+                    <label class="form-check-label" for="tateti">Tateti</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="memotest" formControlName="memotest">
+                    <label class="form-check-label" for="memotest">Memotest</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="piedraPapelTijera"
+                        formControlName="piedraPapelTijera">
+                    <label class="form-check-label" for="piedraPapelTijera">Piedra papel o tijera</label>
+                </div>
+
+                <ng-container>
+                    <small class="text-danger"
+                        *ngIf="(!tateti!.valid && tateti!.touched) || (!memotest!.valid  && memotest!.touched) || (!piedraPapelTijera!.valid  && piedraPapelTijera!.touched)">
+                        Se debe marcar al menos uno
+                    </small>
+                </ng-container>
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-12">
+                <label for="experienciaUsuario">Experiencia de usuario</label>
+                <select id="experienciaUsuario" formControlName="experienciaUsuario">
+                    <option value="" disabled selected>Selecciona</option>
+                    <option value="muyInsatisfecho">Muy insatisfecho</option>
+                    <option value="insatisfecho">Insatisfecho</option>
+                    <option value="neutro">Nu fu ni fa</option>
+                    <option value="satisfecho">Satisfecho</option>
+                    <option value="muySatisfecho">Muy satisfecho</option>
+                </select>
+                <ng-container *ngTemplateOutlet="requiredError; context: { control: experienciaUsuario }"></ng-container>
+            </div>
+        </div>
+
+        <br><br>
+        <button type="submit" class="btn-enviar">
+            Enviar
+        </button>
+
+    </form>
+
+</main>

@@ -1,0 +1,16 @@
+// Boton cerrar del modal
+.btn-modal-cerrar {
+    background: #1c4549;
+    color: #b39353;
+    border: 1px solid #b39353;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.btn-modal-cerrar:hover {
+    color: #51db84;
+    border-color: #51db84;
+    transform: scale(1.05);
+}

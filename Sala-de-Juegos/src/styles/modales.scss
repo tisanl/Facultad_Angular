@@ -1,0 +1,30 @@
+.custom-modal-content {
+    background-color: #010b15;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.custom-modal-header {
+    background-color: #09252c;
+    color: #b39353;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: none;
+}
+
+.custom-modal-body {
+    background-color: #09252c;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+}
+
+.custom-modal-footer {
+    background-color: #09252c;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 1.5rem;
+    border-top: none;
+}

@@ -1,0 +1,53 @@
+<main class="contenido-contenedor">
+    <div class="text-center">
+        <div class="d-flex justify-content-center align-items-center position-relative mb-4">
+            <!-- Cronometro -->
+            <p class="cronometro">
+                {{ cronometro?.formateado }}
+            </p>
+
+            <!-- Titulo -->
+            <h2 class="form-title">MAYOR MENOR</h2>
+
+            <!-- Botón arriba a la derecha -->
+            <button class="btn btn-cerrar" (click)="goTo('games/menu')">
+                X
+            </button>
+        </div>
+
+        <div id="hangman-image" class="mb-4 position-relative">
+            <img *ngIf="cartaUrlVolteada; else mostrador" [src]="cartaUrlVolteada" class="img-carta img-carta" />
+
+            <img *ngIf="cartaUrlPorVoltear; else mostrador" [src]="cartaUrlPorVoltear" class="img-carta" />
+
+            <ng-template #mostrador>
+                <img [src]="cartaParteAtras" class="img-carta" />
+            </ng-template>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+            <p class="question-label">
+                ¿QUE SERA LA SIGUIENTE CARTA?
+            </p>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+            <button class="btn btn-type-2" (click)="evaluarCarta('mayor')" [disabled]="seleccionado"
+                [ngClass]="seleccionado? (resultado === 'mayor' ? 'btn-correct' : 'btn-wrong'): ''">MAYOR</button>
+            <button class="btn btn-type-2" (click)="evaluarCarta('igual')" [disabled]="seleccionado"
+                [ngClass]="seleccionado? (resultado === 'igual' ? 'btn-correct' : 'btn-wrong'): ''">IGUAL</button>
+            <button class="btn btn-type-2" (click)="evaluarCarta('menor')" [disabled]="seleccionado"
+                [ngClass]="seleccionado? (resultado === 'menor' ? 'btn-correct' : 'btn-wrong'): ''">MENOR</button>
+        </div>
+        <div class="mb-4 score-box">
+            Score: <span class="score-num">{{ puntos }}</span>
+        </div>
+        <p class="label-color">
+            CARTAS RESTANTES: {{ cartasRestantes }}
+        </p>
+        <p class="label-color">
+            ACIERTOS: {{ aciertos }}
+        </p>
+        <!-- Score-->
+    </div>
+</main>

@@ -1,0 +1,41 @@
+<div class="form-container">
+    <form class="form-box">
+        <h2 class="form-title">REGISTRO</h2>
+
+        <div class="mb-3">
+            <label for="nombre" class="form-label label-color">Nombre</label>
+            <input [(ngModel)]="nombre" type="text" class="form-control input-custom" id="nombre" name="nombre" />
+        </div>
+
+        <div class="mb-3">
+            <label for="apellido" class="form-label label-color">Apellido</label>
+            <input [(ngModel)]="apellido" type="text" class="form-control input-custom" id="apellido" name="apellido" />
+        </div>
+
+        <div class="mb-3">
+            <label for="fechaNacimiento" class="form-label label-color">Fecha de nacimiento</label>
+            <input [(ngModel)]="fecha_nacimiento" type="date" class="form-control input-custom" id="fechaNacimiento"
+                name="fechaNacimiento" />
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label label-color">Correo electrónico</label>
+            <input [(ngModel)]="email" type="email" class="form-control input-custom" id="email" name="email" />
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label label-color">Contraseña</label>
+            <input [(ngModel)]="password" type="password" class="form-control input-custom" id="password" name="password" />
+        </div>
+
+        <div class="d-grid gap-2 mt-3">
+            <button type="button" class="btn btn-type-1" (click)="registrarUsuario()">
+                Registrarse
+            </button>
+
+            <button type="button" class="btn btn-type-2" (click)="goTo('auth/login')">
+                Volver al login
+            </button>
+        </div>
+    </form>
+</div>
